@@ -32,13 +32,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+DOM stands for Document Object Model. It allows JavaScript to interact with web pages. I think of the DOM as a tree. The trunk of the tree is the Document, which is the most general part of the DOM. From there, the DOM branches off, much like branches from a tree trunk. Each branch must end in a node, which contains an object. JavaScript loves objects, and thus can play with the DOM in neat ways.
+
 2. What is an event?
+
+An Event is an event in the DOM. It can be triggered by a human interacting with the webpage (e.g. mouse or keyboard interactions), by JavaScript in the webpage itself (e.g. code), or by some other event in the browser (e.g. losing internet connection).
 
 3. What is an event listener?
 
+An event listener can be attached to DOM objects to allow interactions with the webpage. When an event occurs, the listener is notified and can invoke a function. That function can do a great many things, from styling a webpage differently, to checking a user-inputted email address for mistakes, to creating video games.
+
 4. Why would we convert a NodeList into an Array?
 
+It is relatively common to convert an `HTMLCollection` into an Array using `Array.from()` because an `HTMLCollection` is an array-like object, but doesn't have `.forEach()` as a method. Iterating over the elements in that collection can be quite handy so that built-in loop is nice to have. `NodeList` _does_ have `.forEach()` as a method, though, so that isn't the reason. Unless you're working with older browsers, which don't support `NodeList.forEach()`, in which case you'd want to convert it to an Array in order to iterate over it. At that point, though, you just writing a `for` loop is probably simpler anyway without converting anything.
+
 5. What is a component?
+
+A component is a reuseable pattern of code. It allows JavaScript to quickly create repeated elements and/or interactions. For example, if you have a database full of thousands of Tweets for a particular user, using component to take the data and place it into the HTML, CSS, and JavaScript for each individual Tweet is essential – otherwise, you'd be writing all that code for each of the thousands of Tweets. Let the machine do the hard work!
 
 ### Git Set up
 
