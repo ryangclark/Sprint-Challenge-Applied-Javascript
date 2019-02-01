@@ -230,6 +230,9 @@ body {
   font-size: 25px;
   font-family: Didot, serif;
 }
+.cards-container .card .headline span.code {
+  font-family: Courier New, monospace;
+}
 .cards-container .card .author {
   display: flex;
   justify-content: none;
